@@ -8,6 +8,14 @@
   <p>（画像はありません）</p>
 <% end %>
 
+<% if logged_in? %>
+  <% if current_user.favorite_trips.include?(@trip) %>
+    <%= link_to "★ お気に入り解除", trip_favorite_path(@trip, current_user.favorites.find_by(trip: @trip)), data: { turbo_method: :delete } %>
+  <% else %>
+    <%= link_to "☆ お気に入り追加", trip_favorites_path(@trip), data: { turbo_method: :post } %>
+  <% end %>
+<% end %>
+
 <% if @trip.user == current_user %>
   <%= link_to "編集", edit_trip_path(@trip) %>
   <%= link_to "削除", @trip, data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>

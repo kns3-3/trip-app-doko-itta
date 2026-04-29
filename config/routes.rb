@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "favorites/create"
+  get "favorites/destroy"
   get "trips/index"
   get "trips/show"
   get "trips/new"
@@ -36,6 +38,8 @@ Rails.application.routes.draw do
   get  "/signup", to: "users#new"
   post "/signup", to: "users#create"
 
-  #旅行記録
-  resources :trips
+  #旅行記録・お気に入り機能
+  resources :trips do
+    resources :favorites, only: [:create, :destroy]
+  end
 end
