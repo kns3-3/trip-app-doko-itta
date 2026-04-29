@@ -1,0 +1,28 @@
+<%= form_with model: trip do |f| %>
+  <div>
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :address, "住所" %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div>
+    <%= f.label :visited_at, "訪問日" %>
+    <%= f.date_field :visited_at %>
+  </div>
+
+  <div>
+    <%= f.label :comment, "コメント" %>
+    <%= f.text_area :comment %>
+  </div>
+
+  <div>
+    <%= f.label :photo, "写真" %>
+    <%= f.file_field :photo %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

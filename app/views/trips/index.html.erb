@@ -1,0 +1,11 @@
+<h1>旅行記録一覧</h1>
+
+<%= link_to "新しい記録を投稿", new_trip_path %>
+
+<% @trips.each do |trip| %>
+  <div>
+    <h2><%= link_to trip.title, trip %></h2>
+    <p><%= trip.address %></p>
+    <p><%= trip.visited_at %></p>
+  </div>
+<% end %>

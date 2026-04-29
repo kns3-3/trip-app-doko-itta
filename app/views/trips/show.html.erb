@@ -1,0 +1,11 @@
+<h1><%= @trip.title %></h1>
+<p><%= @trip.address %></p>
+<p><%= @trip.visited_at %></p>
+<p><%= @trip.comment %></p>
+
+<% if @trip.user == current_user %>
+  <%= link_to "編集", edit_trip_path(@trip) %>
+  <%= link_to "削除", @trip, data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>
+<% end %>
+
+<%= link_to "一覧に戻る", trips_path %>

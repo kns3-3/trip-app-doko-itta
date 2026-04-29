@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get "trips/index"
+  get "trips/show"
+  get "trips/new"
+  get "trips/create"
+  get "trips/edit"
+  get "trips/update"
+  get "trips/destroy"
   get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"
@@ -23,6 +30,7 @@ Rails.application.routes.draw do
   get    "/login",   to: "sessions#new"
   post   "/login",   to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"
+  post   "/guest_login", to: "sessions#guest_login"
 
   #ユーザー登録
   get  "/signup", to: "users#new"

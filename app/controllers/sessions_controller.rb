@@ -17,4 +17,13 @@ class SessionsController < ApplicationController
     session.delete(:user_id)
     redirect_to login_path, notice: "ログアウトしました"
   end
+
+  def guest_login
+    user = User.find_or_create_by!(email: "guest@example.com") do |u|
+      u.name = "ゲストユーザー"
+      u.password = SecureRandom.urlsafe_base64
+    end
+    session[:user_id] = user.id
+    redirect_to trips_path, notice: "ゲストとしてログインしました！"
+  end
 end
