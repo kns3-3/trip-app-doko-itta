@@ -5,6 +5,21 @@ class TripsController < ApplicationController
 
   def index
     @trips = Trip.all.order(visited_at: :desc)
+
+    #キーワード検索
+    if params[:search].present?
+      @trips = @trips.where("title LIKE ? OR address LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
+    end
+
+    #自分の投稿フィルター
+    if params[:my_trips] == "1"
+      @trips = @trips.where(user: current_user)
+    end
+
+    #お気に入りフィルター
+    if params[:favorites] == "1"
+      @trips = @trips.where(id: current_user.favorite_trips.ids)
+    end
   end
 
   def show

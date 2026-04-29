@@ -1,5 +1,14 @@
 <h1>旅行記録一覧</h1>
 
+<%= form_with url: trips_path, method: :get do |f| %>
+  <%= f.text_field :search, placeholder: "キーワード検索", value: params[:search] %>
+  <%= f.submit "検索" %>
+<% end %>
+
+<%= link_to "自分の投稿", trips_path(my_trips: "1") %>
+<%= link_to "お気に入り", trips_path(favorites: "1") %>
+<%= link_to "すべて表示", trips_path %>
+
 <%= link_to "新しい記録を投稿", new_trip_path %>
 
 <% @trips.each do |trip| %>
