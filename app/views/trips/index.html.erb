@@ -4,6 +4,9 @@
 
 <% @trips.each do |trip| %>
   <div>
+    <% if trip.photo.attached? %>
+      <%= image_tag trip.photo, style: "width: 150px;" %>
+    <% end %>
     <h2><%= link_to trip.title, trip %></h2>
     <p><%= trip.address %></p>
     <p><%= trip.visited_at %></p>

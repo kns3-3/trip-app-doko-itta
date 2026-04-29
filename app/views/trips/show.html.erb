@@ -2,6 +2,11 @@
 <p><%= @trip.address %></p>
 <p><%= @trip.visited_at %></p>
 <p><%= @trip.comment %></p>
+<% if @trip.photo.attached? %>
+  <%= image_tag @trip.photo, style: "width: 300px;" %>
+<% else %>
+  <p>（画像はありません）</p>
+<% end %>
 
 <% if @trip.user == current_user %>
   <%= link_to "編集", edit_trip_path(@trip) %>
