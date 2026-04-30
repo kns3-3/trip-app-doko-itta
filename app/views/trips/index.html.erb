@@ -1,23 +1,36 @@
-<h1>旅行記録一覧</h1>
+<div class="container mt-4">
+  <h1 class="mb-4">旅行記録一覧</h1>
 
-<%= form_with url: trips_path, method: :get do |f| %>
-  <%= f.text_field :search, placeholder: "キーワード検索", value: params[:search] %>
-  <%= f.submit "検索" %>
-<% end %>
+  <%= form_with url: trips_path, method: :get, class: "d-flex mb-3" do |f| %>
+    <%= f.text_field :search, placeholder: "キーワード検索", value: params[:search], class: "form-control me-2" %>
+    <%= f.submit "検索", class: "btn btn-outline-primary" %>
+  <% end %>
 
-<%= link_to "自分の投稿", trips_path(my_trips: "1") %>
-<%= link_to "お気に入り", trips_path(favorites: "1") %>
-<%= link_to "すべて表示", trips_path %>
-
-<%= link_to "新しい記録を投稿", new_trip_path %>
-
-<% @trips.each do |trip| %>
-  <div>
-    <% if trip.photo.attached? %>
-      <%= image_tag trip.photo, style: "width: 150px;" %>
-    <% end %>
-    <h2><%= link_to trip.title, trip %></h2>
-    <p><%= trip.address %></p>
-    <p><%= trip.visited_at %></p>
+  <div class="mb-3">
+    <%= link_to "自分の投稿", trips_path(my_trips: "1"), class: "btn btn-outline-secondary me-2" %>
+    <%= link_to "お気に入り", trips_path(favorites: "1"), class: "btn btn-outline-warning me-2" %>
+    <%= link_to "すべて表示", trips_path, class: "btn btn-outline-dark me-2" %>
+    <%= link_to "新しい記録を投稿", new_trip_path, class: "btn btn-primary" %>
   </div>
-<% end %>
+
+  <div class="row">
+    <% @trips.each do |trip| %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <% if trip.photo.attached? %>
+            <%= image_tag trip.photo, class: "card-img-top", style: "height: 200px; object-fit: cover;" %>
+          <% else %>
+            <div style="height: 200px; background-color: #dee2e6; display: flex; align-items: center; justify-content: center;">
+              <span class="text-muted">📷 写真なし</span>
+            </div>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to trip.title, trip, class: "text-decoration-none" %></h5>
+            <p class="card-text text-muted"><%= trip.address %></p>
+            <p class="card-text"><small class="text-muted"><%= trip.visited_at %></small></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,28 +1,28 @@
 <%= form_with model: trip do |f| %>
-  <div>
-    <%= f.label :title, "タイトル" %>
-    <%= f.text_field :title %>
+  <div class="mb-3">
+    <%= f.label :title, "タイトル", class: "form-label" %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
 
-  <div>
-    <%= f.label :address, "住所" %>
-    <%= f.text_field :address %>
+  <div class="mb-3">
+    <%= f.label :address, "住所", class: "form-label" %>
+    <%= f.text_field :address, class: "form-control" %>
   </div>
 
-  <div>
-    <%= f.label :visited_at, "訪問日" %>
-    <%= f.date_field :visited_at %>
+  <div class="mb-3">
+    <%= f.label :visited_at, "訪問日", class: "form-label" %>
+    <%= f.date_field :visited_at, class: "form-control" %>
   </div>
 
-  <div>
-    <%= f.label :comment, "コメント" %>
-    <%= f.text_area :comment %>
+  <div class="mb-3">
+    <%= f.label :comment, "コメント", class: "form-label" %>
+    <%= f.text_area :comment, class: "form-control", rows: 4 %>
   </div>
 
-  <div>
-    <%= f.label :photo, "写真" %>
-    <%= f.file_field :photo %>
+  <div class="mb-3">
+    <%= f.label :photo, "写真", class: "form-label" %>
+    <%= f.file_field :photo, class: "form-control" %>
   </div>
 
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-primary w-100" %>
 <% end %>
