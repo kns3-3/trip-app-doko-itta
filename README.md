@@ -32,7 +32,7 @@ https://trip-app-doko-itta.onrender.com
 - Render（デプロイ）
 
 ## ER図
-![ER図](app/assets/images/er_diagram.png)
+![ER図](https://raw.githubusercontent.com/kns3-3/trip-app-doko-itta/main/app/assets/images/er_diagram.png)
 
 ## なぜこれを作ったか
 「あの場所どこだったっけ？」という経験から、旅行記録を地図と一緒に残せるアプリを作りました。
