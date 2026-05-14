@@ -28,3 +28,4 @@ local:
 
 cloudinary:
   service: Cloudinary
+  folder: trip_app
