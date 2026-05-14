@@ -1,4 +1,5 @@
 # どこいったっけ？
+<img width="736" height="642" alt="スクリーンショット 2026-05-14 122219" src="https://github.com/user-attachments/assets/3df2b6f6-bd8f-40e7-9d37-dc0147e01590" />
 
 ## アプリの概要
 「どこに行ったか一目でわかる、あなただけの旅行地図」
@@ -9,6 +10,8 @@
 https://trip-app-doko-itta.onrender.com
 
 ## 使い方
+<img width="1909" height="876" alt="Animation" src="https://github.com/user-attachments/assets/bb60c281-4043-4560-ae89-fd4506ae8612" />
+
 1. ゲストログインまたは新規登録してログイン
 2. 「新しい記録を投稿」から旅行記録を追加
 3. 住所を入力するとGoogle Mapsで地図が自動表示
@@ -40,7 +43,7 @@ https://trip-app-doko-itta.onrender.com
 - 住所を入力するだけでGoogle Mapsに自動ピン表示
 - ゲストログイン機能で採用担当様がすぐ試せる設計
 
-  ## 今後の展望
+## 今後の展望
 - 複数枚写真投稿: 1つの思い出に対して、より多くの写真をアップロード可能にする。
 - 旅ルートの可視化: 複数のピンを線で結び、旅行の行程を視覚化する。
 - SNSシェア機能: 自分の作った旅マップをURLで友人に共有できるようにする。
