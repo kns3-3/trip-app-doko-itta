@@ -36,9 +36,6 @@ https://trip-app-doko-itta.onrender.com
 - Active Storage（Cloudinary)
 - Render（デプロイ）
 
-## ER図
-![ER図](https://raw.githubusercontent.com/kns3-3/trip-app-doko-itta/main/app/assets/images/er_diagram.png)
-
 ## 工夫したところ
 - 住所を入力するだけでGoogle Mapsに自動ピン表示
 - ゲストログイン機能で採用担当様がすぐ試せる設計
@@ -47,3 +44,7 @@ https://trip-app-doko-itta.onrender.com
 - 複数枚写真投稿: 1つの思い出に対して、より多くの写真をアップロード可能にする。
 - 旅ルートの可視化: 複数のピンを線で結び、旅行の行程を視覚化する。
 - SNSシェア機能: 自分の作った旅マップをURLで友人に共有できるようにする。
+
+## ER図
+![ER図](https://raw.githubusercontent.com/kns3-3/trip-app-doko-itta/main/app/assets/images/er_diagram.png)
+
