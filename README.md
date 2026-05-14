@@ -1,7 +1,9 @@
 # どこいったっけ？
 
 ## アプリの概要
-旅行の記録を残せるWebアプリです。訪れた場所の住所を入力するだけでGoogle Mapsに自動表示されます。
+「どこに行ったか一目でわかる、あなただけの旅行地図」
+訪れた場所の住所を入力するだけで、Google Maps上に思い出をマッピングできる旅行記録管理アプリです。
+訪れた日付やコメントも記録します。
 
 ## アプリのURL
 https://trip-app-doko-itta.onrender.com
@@ -28,15 +30,17 @@ https://trip-app-doko-itta.onrender.com
 - Bootstrap 5
 - Google Maps API
 - Geocoder
-- Active Storage
+- Active Storage（Cloudinary)
 - Render（デプロイ）
 
 ## ER図
 ![ER図](https://raw.githubusercontent.com/kns3-3/trip-app-doko-itta/main/app/assets/images/er_diagram.png)
 
-## なぜこれを作ったか
-「あの場所どこだったっけ？」という経験から、旅行記録を地図と一緒に残せるアプリを作りました。
-
 ## 工夫したところ
 - 住所を入力するだけでGoogle Mapsに自動ピン表示
 - ゲストログイン機能で採用担当様がすぐ試せる設計
+
+  ## 今後の展望
+- 複数枚写真投稿: 1つの思い出に対して、より多くの写真をアップロード可能にする。
+- 旅ルートの可視化: 複数のピンを線で結び、旅行の行程を視覚化する。
+- SNSシェア機能: 自分の作った旅マップをURLで友人に共有できるようにする。
